@@ -1,8 +1,7 @@
 local p = require("nighthawk.palette")
-local lush = require("lush")
-local hsl = lush.hsl
+local hsl = require("lush").hsl
 
-return lush(function()
+return function()
   return {
     -- Menu window
     BlinkCmpMenu            { bg = hsl(p.bg_dim),    fg = hsl(p.fg) },
@@ -60,4 +59,4 @@ return lush(function()
     BlinkCmpKindEvent       { fg = hsl(p.yellow) },
     BlinkCmpKindOperator    { fg = hsl(p.grey_fg) },
   }
-end)
+end

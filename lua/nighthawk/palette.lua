@@ -44,4 +44,10 @@ M.tan = "#CFC1B2"
 -- Diagnostics
 M.red = "#ff5555"
 
+-- Diff backgrounds — tinted dark versions of semantic colors
+M.diff_add    = "#0a2018"
+M.diff_delete = "#200a0a"
+M.diff_change = "#1c1308"
+M.diff_text   = "#2e1e08"
+
 return M
