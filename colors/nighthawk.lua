@@ -1,10 +1,12 @@
 vim.opt.background = "dark"
 
 local lush = require("lush")
+local integrations = require("nighthawk").get_config().integrations
 
 lush(require("nighthawk.theme"))
-lush(require("nighthawk.integrations.blink"))
-lush(require("nighthawk.integrations.noice"))
-lush(require("nighthawk.integrations.incline"))
-lush(require("nighthawk.integrations.neogit"))
-lush(require("nighthawk.integrations.tiny-inline-diagnostics"))
+
+if integrations.blink                   then lush(require("nighthawk.integrations.blink"))                   end
+if integrations.noice                   then lush(require("nighthawk.integrations.noice"))                   end
+if integrations.incline                 then lush(require("nighthawk.integrations.incline"))                 end
+if integrations.neogit                  then lush(require("nighthawk.integrations.neogit"))                  end
+if integrations.tiny_inline_diagnostics then lush(require("nighthawk.integrations.tiny-inline-diagnostics")) end

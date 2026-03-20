@@ -14,7 +14,27 @@ The color palette is built around a deep navy-black background with a deliberate
 vim.cmd.colorscheme("nighthawk")
 ```
 
+## Setup
+
+All integrations are enabled by default. Disable any you don't need:
+
+```lua
+require("nighthawk").setup({
+  integrations = {
+    blink                   = true,
+    noice                   = true,
+    incline                 = true,
+    neogit                  = true,
+    tiny_inline_diagnostics = true,
+  },
+})
+```
+
+`setup()` must be called before the colorscheme is applied.
+
 ## Lualine
+
+The lualine theme is not auto-applied. Pass it explicitly in your lualine setup:
 
 ```lua
 require("lualine").setup({ options = { theme = require("nighthawk.integrations.lualine") } })
