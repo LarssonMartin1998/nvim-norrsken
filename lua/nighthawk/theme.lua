@@ -29,7 +29,7 @@ local theme = lush(function(injected_functions)
 
     -- Legacy syntax
     Keyword      { fg = hsl(p.yellow) },
-    Statement    { fg = hsl(p.purple) },
+    Statement    { fg = hsl(p.yellow) },
     Type         { fg = hsl(p.blue) },
     Include      { fg = hsl(p.teal_muted) },
     Operator     { fg = hsl(p.grey_fg) },
@@ -53,7 +53,6 @@ local theme = lush(function(injected_functions)
     sym("@keyword.repeat")                             { fg = hsl(p.teal) },
     sym("@keyword.exception")                          { fg = hsl(p.teal) },
     sym("@keyword.import")                             { fg = hsl(p.teal_muted) },
-    sym("@keyword.import.cpp")                         { fg = hsl(p.teal_muted) },
     sym("@operator")                                   { fg = hsl(p.grey_fg) },
     sym("@string")                                     { fg = hsl(p.tan) },
     sym("@string.escape")                              { fg = hsl(p.tan) },
@@ -77,8 +76,6 @@ local theme = lush(function(injected_functions)
     sym("@variable")                                   { fg = hsl(p.fg) },
     sym("@variable.builtin")                           { fg = hsl(p.yellow) },
     sym("@variable.parameter")                         { fg = hsl(p.fg), gui = "italic" },
-    sym("@variable.parameter.cpp")                     { fg = hsl(p.fg), gui = "italic" },
-    sym("@parameter")                                  { fg = hsl(p.fg), gui = "italic" },
     sym("@field")                                      { fg = hsl(p.fg), gui = "bold" },
     sym("@property")                                   { fg = hsl(p.fg), gui = "bold" },
     sym("@include")                                    { fg = hsl(p.teal_muted) },
