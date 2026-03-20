@@ -12,9 +12,10 @@ M.bg_3    = "#2a2a4a"
 M.fg = "#eeeef5"
 
 -- Greys
-M.grey_dark  = "#393959"
-M.grey_light = "#5c5c7c"
-M.grey_fg    = "#B4B4B9"
+M.grey_dark   = "#393959"
+M.grey_light  = "#5c5c7c"
+M.grey_fg     = "#B4B4B9"
+M.grey_bright = "#CACACE"
 
 -- Amber — keywords, declarations, language structure
 M.yellow = "#D4973E"

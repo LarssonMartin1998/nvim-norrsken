@@ -110,7 +110,7 @@ local theme = lush(function(injected_functions)
     -- Git diff
     DiffAdd      { fg = hsl(p.teal),    bg = hsl(p.diff_add) },
     DiffChange   { fg = hsl(p.yellow), bg = hsl(p.diff_change) },
-    DiffDelete   { fg = hsl(p.grey_fg), bg = hsl(p.diff_delete) },
+    DiffDelete   { fg = hsl(p.grey_bright), bg = hsl(p.diff_delete) },
     DiffText     { fg = hsl(p.yellow), bg = hsl(p.diff_text), gui = "bold" },
 
     -- Gitsigns
@@ -122,7 +122,7 @@ local theme = lush(function(injected_functions)
     GitSignsDeleteNr         { GitSignsDelete },
     GitSignsAddLn            { bg = hsl(p.diff_add),    fg = hsl(p.teal) },
     GitSignsChangeLn         { bg = hsl(p.diff_change), fg = hsl(p.yellow) },
-    GitSignsDeleteLn         { bg = hsl(p.diff_delete), fg = hsl(p.grey_fg) },
+    GitSignsDeleteLn         { bg = hsl(p.diff_delete), fg = hsl(p.grey_bright) },
 
     -- Snacks indent
     SnacksIndent             { fg = hsl(p.bg_2) },

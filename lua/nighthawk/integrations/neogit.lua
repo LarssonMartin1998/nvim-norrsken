@@ -38,8 +38,8 @@ return function()
     NeogitDiffContextHighlight  { bg = hsl(p.bg_1) },
     NeogitDiffAdd               { bg = hsl(p.diff_add),    fg = hsl(p.teal) },
     NeogitDiffAddHighlight      { bg = hsl(p.diff_add),    fg = hsl(p.teal),       gui = "bold" },
-    NeogitDiffDelete            { bg = hsl(p.diff_delete), fg = hsl(p.grey_fg) },
-    NeogitDiffDeleteHighlight   { bg = hsl(p.diff_delete), fg = hsl(p.grey_fg),    gui = "bold" },
+    NeogitDiffDelete            { bg = hsl(p.diff_delete), fg = hsl(p.grey_bright) },
+    NeogitDiffDeleteHighlight   { bg = hsl(p.diff_delete), fg = hsl(p.grey_bright), gui = "bold" },
 
     -- Commit message
     NeogitCommitMessage         { fg = hsl(p.fg) },
