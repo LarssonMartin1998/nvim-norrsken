@@ -36,7 +36,8 @@ M.teal_muted  = "#9BCCBF"
 -- Cyan — types
 M.cyan        = "#39c5cf"
 
--- Blue — namespaces
+-- Blue — namespaces, types
+M.blue        = "#7ab4f5"
 M.blue_mid    = "#6699cc"
 M.blue_muted  = "#607a94"
 M.blue_light  = "#BFDAFF"
