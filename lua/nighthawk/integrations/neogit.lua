@@ -36,10 +36,10 @@ return function()
     NeogitHunkHeaderHighlight   { bg = hsl(p.bg_3),        fg = hsl(p.fg),     gui = "bold" },
     NeogitDiffContext           { bg = hsl(p.bg) },
     NeogitDiffContextHighlight  { bg = hsl(p.bg_1) },
-    NeogitDiffAdd               { bg = hsl(p.diff_add),    fg = hsl(p.teal_muted) },
-    NeogitDiffAddHighlight      { bg = hsl(p.diff_add),    fg = hsl(p.teal_muted), gui = "bold" },
-    NeogitDiffDelete            { bg = hsl(p.diff_delete), fg = hsl(p.red) },
-    NeogitDiffDeleteHighlight   { bg = hsl(p.diff_delete), fg = hsl(p.red),        gui = "bold" },
+    NeogitDiffAdd               { bg = hsl(p.diff_add),    fg = hsl(p.teal) },
+    NeogitDiffAddHighlight      { bg = hsl(p.diff_add),    fg = hsl(p.teal),       gui = "bold" },
+    NeogitDiffDelete            { bg = hsl(p.diff_delete), fg = hsl(p.grey_fg) },
+    NeogitDiffDeleteHighlight   { bg = hsl(p.diff_delete), fg = hsl(p.grey_fg),    gui = "bold" },
 
     -- Commit message
     NeogitCommitMessage         { fg = hsl(p.fg) },

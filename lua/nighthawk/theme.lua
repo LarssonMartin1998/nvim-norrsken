@@ -108,10 +108,10 @@ local theme = lush(function(injected_functions)
     DiagnosticUnderlineHint  { gui = "undercurl", sp = p.teal_muted },
 
     -- Git diff
-    DiffAdd      { fg = hsl(p.teal_muted), bg = hsl(p.diff_add) },
-    DiffChange   { fg = hsl(p.yellow),     bg = hsl(p.diff_change) },
-    DiffDelete   { fg = hsl(p.red),        bg = hsl(p.diff_delete) },
-    DiffText     { fg = hsl(p.yellow),     bg = hsl(p.diff_text), gui = "bold" },
+    DiffAdd      { fg = hsl(p.teal),    bg = hsl(p.diff_add) },
+    DiffChange   { fg = hsl(p.yellow), bg = hsl(p.diff_change) },
+    DiffDelete   { fg = hsl(p.grey_fg), bg = hsl(p.diff_delete) },
+    DiffText     { fg = hsl(p.yellow), bg = hsl(p.diff_text), gui = "bold" },
 
     -- Gitsigns
     GitSignsAdd              { fg = hsl(p.teal_muted) },
@@ -120,9 +120,9 @@ local theme = lush(function(injected_functions)
     GitSignsAddNr            { GitSignsAdd },
     GitSignsChangeNr         { GitSignsChange },
     GitSignsDeleteNr         { GitSignsDelete },
-    GitSignsAddLn            { bg = hsl(p.diff_add),    fg = hsl(p.teal_muted) },
+    GitSignsAddLn            { bg = hsl(p.diff_add),    fg = hsl(p.teal) },
     GitSignsChangeLn         { bg = hsl(p.diff_change), fg = hsl(p.yellow) },
-    GitSignsDeleteLn         { bg = hsl(p.diff_delete), fg = hsl(p.red) },
+    GitSignsDeleteLn         { bg = hsl(p.diff_delete), fg = hsl(p.grey_fg) },
 
     -- Snacks indent
     SnacksIndent             { fg = hsl(p.bg_2) },
