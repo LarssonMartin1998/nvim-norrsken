@@ -1,2 +1,2 @@
 vim.opt.background = "dark"
-require("lush")(require("nighthawk.theme").theme)
+require("lush")(require("nighthawk.theme"))

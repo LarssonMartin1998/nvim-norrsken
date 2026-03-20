@@ -17,5 +17,5 @@ vim.cmd.colorscheme("nighthawk")
 ## Lualine
 
 ```lua
-require("lualine").setup({ options = { theme = require("nighthawk.theme").lualine } })
+require("lualine").setup({ options = { theme = require("nighthawk.integrations.lualine") } })
 ```
