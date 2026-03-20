@@ -1,4 +1,4 @@
-local p = require("nighthawk.palette")
+local p = require("norrsken.palette")
 local hsl = require("lush").hsl
 
 return function()

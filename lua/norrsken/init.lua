@@ -14,6 +14,7 @@ local config = vim.deepcopy(defaults)
 
 function M.setup(opts)
   config = vim.tbl_deep_extend("force", defaults, opts or {})
+  vim.cmd.colorscheme("norrsken")
 end
 
 function M.get_config()

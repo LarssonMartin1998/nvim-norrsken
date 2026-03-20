@@ -1,4 +1,4 @@
-# nighthawk.nvim
+# norrsken.nvim
 
 A dark Neovim colorscheme built with [lush.nvim](https://github.com/rktjmp/lush.nvim).
 
@@ -6,20 +6,14 @@ The color palette is built around a deep navy-black background with a deliberate
 
 ## Install
 
+Requires [lush.nvim](https://github.com/rktjmp/lush.nvim) (declared automatically as a lazy.nvim dependency).
+
 ```lua
-{ "LarssonMartin1998/nighthawk.nvim" }
+{ "LarssonMartin1998/norrsken.nvim" }
 ```
 
 ```lua
-vim.cmd.colorscheme("nighthawk")
-```
-
-## Setup
-
-All integrations are opt-in. Enable the ones you use:
-
-```lua
-require("nighthawk").setup({
+require("norrsken").setup({
   integrations = {
     blink                   = true,
     noice                   = true,
@@ -30,12 +24,14 @@ require("nighthawk").setup({
 })
 ```
 
-`setup()` must be called before the colorscheme is applied.
+All integrations are opt-in and disabled by default. `setup()` applies the colorscheme. You can also use `colorscheme norrsken` directly without calling `setup()` if you don't need any integrations.
+
+Highlight groups for [snacks.nvim](https://github.com/folke/snacks.nvim) (indent, picker, notifier, dashboard, words) are included in the base theme automatically.
 
 ## Lualine
 
 The lualine theme is not auto-applied. Pass it explicitly in your lualine setup:
 
 ```lua
-require("lualine").setup({ options = { theme = require("nighthawk.integrations.lualine") } })
+require("lualine").setup({ options = { theme = require("norrsken.integrations.lualine") } })
 ```

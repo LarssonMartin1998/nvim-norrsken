@@ -1,6 +1,6 @@
 local lush = require("lush")
 local hsl = lush.hsl
-local p = require("nighthawk.palette")
+local p = require("norrsken.palette")
 
 local theme = lush(function(injected_functions)
   local sym = injected_functions.sym
@@ -66,8 +66,6 @@ local theme = lush(function(injected_functions)
     sym("@function.builtin")                           { fg = hsl(p.yellow) },
     sym("@function.call")                              { fg = hsl(p.teal) },
     sym("@function.macro")                             { fg = hsl(p.teal_muted) },
-    sym("@method")                                     { fg = hsl(p.teal) },
-    sym("@method.call")                                { fg = hsl(p.teal) },
     sym("@type")                                       { fg = hsl(p.blue) },
     sym("@type.builtin")                               { fg = hsl(p.blue) },
     sym("@type.builtin.cpp")                           { fg = hsl(p.yellow) },
