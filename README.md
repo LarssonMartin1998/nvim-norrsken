@@ -7,7 +7,7 @@ The color palette is built around a deep navy-black background with a deliberate
 ## Install
 
 ```lua
-{ "LarssonMartin1998/nighthawk.nvim", dependencies = { "rktjmp/lush.nvim" } }
+{ "LarssonMartin1998/nighthawk.nvim" }
 ```
 
 ```lua
