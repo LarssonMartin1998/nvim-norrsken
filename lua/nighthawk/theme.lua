@@ -1,6 +1,6 @@
 local lush = require("lush")
 local hsl = lush.hsl
-local p = require("falcon.palette")
+local p = require("nighthawk.palette")
 
 local theme = lush(function(injected_functions)
   local sym = injected_functions.sym
