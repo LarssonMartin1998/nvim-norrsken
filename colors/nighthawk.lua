@@ -1,2 +1,6 @@
 vim.opt.background = "dark"
-require("lush")(require("nighthawk.theme"))
+
+local lush = require("lush")
+
+lush(require("nighthawk.theme"))
+lush(require("nighthawk.integrations.blink"))
