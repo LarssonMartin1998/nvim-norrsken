@@ -21,7 +21,7 @@ M.grey_light  = "#5c5c7c"
 M.grey_fg     = "#B4B4B9"
 
 -- Yellow — keywords, builtins, language structure
-M.yellow      = "#FFC552"
+M.yellow      = "#D4973E"
 M.yellow_dim  = "#FFD392"
 
 -- Orange — operators, search

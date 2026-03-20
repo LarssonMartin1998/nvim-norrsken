@@ -46,6 +46,7 @@ local theme = lush(function(injected_functions)
     sym("@keyword")                                    { fg = hsl(p.yellow) },
     sym("@keyword.function")                           { fg = hsl(p.yellow) },
     sym("@keyword.return")                             { fg = hsl(p.teal) },
+    sym("@keyword.coroutine")                          { fg = hsl(p.teal) },
     sym("@keyword.type")                               { fg = hsl(p.yellow) },
     sym("@keyword.conditional")                        { fg = hsl(p.teal) },
     sym("@keyword.conditional.ternary")                { fg = hsl(p.teal) },
@@ -96,6 +97,8 @@ local theme = lush(function(injected_functions)
     sym("@lsp.type.parameter")                         { fg = hsl(p.fg), gui = "italic" },
     sym("@lsp.type.parameter.cpp")                     { fg = hsl(p.fg), gui = "italic" },
     sym("@lsp.typemod.class.constructorOrDestructor.cpp") { fg = hsl(p.teal) },
+    sym("@lsp.typemod.class.deduced.cpp")              { fg = hsl(p.yellow) },
+    sym("@lsp.typemod.type.deduced.cpp")               { fg = hsl(p.yellow) },
 
     -- Diagnostics
     DiagnosticError          { fg = hsl(p.red) },
