@@ -1,0 +1,212 @@
+local lush = require("lush")
+local hsl = lush.hsl
+local p = require("falcon.palette")
+
+local theme = lush(function(injected_functions)
+  local sym = injected_functions.sym
+  return {
+    -- Editor
+    Normal       { bg = hsl(p.bg),       fg = hsl(p.fg) },
+    NormalFloat  { bg = hsl(p.bg_dim),   fg = hsl(p.fg) },
+    Comment      { fg = hsl(p.grey_light), gui = "italic" },
+    ColorColumn  { bg = hsl(p.bg_dark) },
+    CursorLine   { bg = hsl(p.bg_1) },
+    CursorLineNr { fg = hsl(p.yellow),   bg = hsl(p.bg_1) },
+    LineNr       { fg = hsl(p.grey_dark) },
+    SignColumn   { bg = Normal.bg },
+    WinSeparator { fg = hsl(p.bg_2) },
+    VertSplit    { WinSeparator },
+    StatusLine   { bg = hsl(p.bg_dim),   fg = hsl(p.fg) },
+    Pmenu        { bg = hsl(p.bg_1),     fg = hsl(p.fg) },
+    PmenuSel     { bg = hsl(p.peach),    fg = hsl(p.bg) },
+    PmenuSbar    { bg = hsl(p.bg_2) },
+    PmenuThumb   { bg = hsl(p.yellow) },
+    Visual       { bg = hsl(p.bg_3) },
+    Search       { bg = hsl(p.yellow),   fg = hsl(p.bg) },
+    IncSearch    { bg = hsl(p.orange),   fg = hsl(p.bg) },
+    Folded       { bg = hsl(p.bg_1),     fg = hsl(p.grey_light) },
+    FoldColumn   { bg = Normal.bg,       fg = hsl(p.grey_dark) },
+
+    -- Legacy syntax
+    Keyword      { fg = hsl(p.yellow) },
+    Statement    { fg = hsl(p.purple) },
+    Type         { fg = hsl(p.cyan) },
+    Include      { fg = hsl(p.teal_muted) },
+    Operator     { fg = hsl(p.grey_fg) },
+    String       { fg = hsl(p.tan) },
+    Number       { fg = hsl(p.tan) },
+    Boolean      { fg = hsl(p.tan) },
+    Constant     { fg = hsl(p.tan) },
+    Function     { fg = hsl(p.teal) },
+    Identifier   { fg = hsl(p.fg) },
+    PreProc      { fg = hsl(p.teal_muted) },
+    Special      { fg = hsl(p.cyan) },
+
+    -- Treesitter
+    sym("@keyword")                                    { fg = hsl(p.yellow) },
+    sym("@keyword.function")                           { fg = hsl(p.yellow) },
+    sym("@keyword.return")                             { fg = hsl(p.teal) },
+    sym("@keyword.type")                               { fg = hsl(p.yellow) },
+    sym("@keyword.import")                             { fg = hsl(p.teal_muted) },
+    sym("@keyword.import.cpp")                         { fg = hsl(p.teal_muted) },
+    sym("@operator")                                   { fg = hsl(p.grey_fg) },
+    sym("@string")                                     { fg = hsl(p.tan) },
+    sym("@string.escape")                              { fg = hsl(p.tan) },
+    sym("@number")                                     { fg = hsl(p.tan) },
+    sym("@float")                                      { fg = hsl(p.tan) },
+    sym("@boolean")                                    { fg = hsl(p.tan) },
+    sym("@constant")                                   { fg = hsl(p.tan) },
+    sym("@constant.builtin")                           { fg = hsl(p.tan) },
+    sym("@constant.macro")                             { fg = hsl(p.teal_muted) },
+    sym("@function")                                   { fg = hsl(p.teal) },
+    sym("@function.builtin")                           { fg = hsl(p.yellow) },
+    sym("@function.call")                              { fg = hsl(p.teal) },
+    sym("@function.macro")                             { fg = hsl(p.teal_muted) },
+    sym("@method")                                     { fg = hsl(p.teal) },
+    sym("@method.call")                                { fg = hsl(p.teal) },
+    sym("@type")                                       { fg = hsl(p.cyan) },
+    sym("@type.builtin")                               { fg = hsl(p.cyan) },
+    sym("@type.builtin.cpp")                           { fg = hsl(p.yellow) },
+    sym("@type.definition")                            { fg = hsl(p.cyan) },
+    sym("@type.qualifier")                             { fg = hsl(p.yellow) },
+    sym("@variable")                                   { fg = hsl(p.fg) },
+    sym("@variable.builtin")                           { fg = hsl(p.yellow) },
+    sym("@variable.parameter")                         { fg = hsl(p.fg), gui = "italic" },
+    sym("@variable.parameter.cpp")                     { fg = hsl(p.fg), gui = "italic" },
+    sym("@parameter")                                  { fg = hsl(p.fg), gui = "italic" },
+    sym("@field")                                      { fg = hsl(p.fg), gui = "bold" },
+    sym("@property")                                   { fg = hsl(p.fg), gui = "bold" },
+    sym("@include")                                    { fg = hsl(p.teal_muted) },
+    sym("@comment")                                    { fg = hsl(p.grey_light), gui = "italic" },
+    sym("@punctuation")                                { fg = hsl(p.grey_fg) },
+    sym("@punctuation.bracket")                        { fg = hsl(p.grey_fg) },
+    sym("@punctuation.delimiter")                      { fg = hsl(p.grey_fg) },
+    sym("@tag")                                        { fg = hsl(p.yellow) },
+    sym("@namespace")                                  { fg = hsl(p.blue_muted) },
+    sym("@module")                                     { fg = hsl(p.blue_muted) },
+    sym("@preproc")                                    { fg = hsl(p.teal_muted) },
+
+    -- LSP semantic tokens
+    sym("@lsp.type.macro")                             { fg = hsl(p.teal_muted) },
+    sym("@lsp.type.macro.cpp")                         { fg = hsl(p.teal_muted) },
+    sym("@lsp.type.parameter")                         { fg = hsl(p.fg), gui = "italic" },
+    sym("@lsp.type.parameter.cpp")                     { fg = hsl(p.fg), gui = "italic" },
+    sym("@lsp.typemod.class.constructorOrDestructor.cpp") { fg = hsl(p.teal) },
+
+    -- Diagnostics
+    DiagnosticError          { fg = hsl(p.red) },
+    DiagnosticWarn           { fg = hsl(p.yellow) },
+    DiagnosticInfo           { fg = hsl(p.blue_light) },
+    DiagnosticHint           { fg = hsl(p.teal_muted) },
+    DiagnosticUnderlineError { gui = "undercurl", sp = p.red },
+    DiagnosticUnderlineWarn  { gui = "undercurl", sp = p.yellow },
+    DiagnosticUnderlineInfo  { gui = "undercurl", sp = p.blue_light },
+    DiagnosticUnderlineHint  { gui = "undercurl", sp = p.teal_muted },
+
+    -- Git diff
+    DiffAdd      { fg = hsl(p.teal_muted), bg = hsl(p.bg_dark) },
+    DiffChange   { fg = hsl(p.yellow),     bg = hsl(p.bg_dark) },
+    DiffDelete   { fg = hsl(p.red),        bg = hsl(p.bg_dark) },
+
+    -- Gitsigns
+    GitSignsAdd              { fg = hsl(p.teal_muted) },
+    GitSignsChange           { fg = hsl(p.yellow) },
+    GitSignsDelete           { fg = hsl(p.red) },
+    GitSignsAddNr            { GitSignsAdd },
+    GitSignsChangeNr         { GitSignsChange },
+    GitSignsDeleteNr         { GitSignsDelete },
+    GitSignsAddLn            { bg = hsl(p.bg_dark), fg = hsl(p.teal_muted) },
+    GitSignsChangeLn         { bg = hsl(p.bg_dark), fg = hsl(p.yellow) },
+    GitSignsDeleteLn         { bg = hsl(p.bg_dark), fg = hsl(p.red) },
+
+    -- Snacks indent
+    SnacksIndent             { fg = hsl(p.bg_2) },
+    SnacksIndentScope        { fg = hsl(p.grey_dark) },
+
+    -- Snacks picker
+    SnacksPickerNormal       { bg = hsl(p.bg_dim),   fg = hsl(p.fg) },
+    SnacksPickerBorder       { bg = hsl(p.bg_dim),   fg = hsl(p.bg_3) },
+    SnacksPickerTitle        { fg = hsl(p.yellow),   bg = hsl(p.bg_dim) },
+    SnacksPickerList         { bg = hsl(p.bg_dim),   fg = hsl(p.fg) },
+    SnacksPickerListCursorLine { bg = hsl(p.bg_1),   fg = hsl(p.fg) },
+    SnacksPickerPreview      { bg = hsl(p.bg),       fg = hsl(p.fg) },
+    SnacksPickerPreviewBorder { bg = hsl(p.bg),      fg = hsl(p.bg_3) },
+    SnacksPickerPreviewTitle { fg = hsl(p.teal),     bg = hsl(p.bg) },
+    SnacksPickerPrompt       { fg = hsl(p.yellow) },
+    SnacksPickerMatch        { fg = hsl(p.teal),     gui = "bold" },
+    SnacksPickerDir          { fg = hsl(p.blue_muted) },
+    SnacksPickerFile         { fg = hsl(p.fg) },
+
+    -- Snacks notifier
+    SnacksNotifierInfo       { bg = hsl(p.bg_dim),   fg = hsl(p.blue_light) },
+    SnacksNotifierWarn       { bg = hsl(p.bg_dim),   fg = hsl(p.yellow) },
+    SnacksNotifierError      { bg = hsl(p.bg_dim),   fg = hsl(p.red) },
+    SnacksNotifierDebug      { bg = hsl(p.bg_dim),   fg = hsl(p.grey_light) },
+    SnacksNotifierTrace      { bg = hsl(p.bg_dim),   fg = hsl(p.grey_light) },
+    SnacksNotifierBorderInfo  { bg = hsl(p.bg_dim),  fg = hsl(p.blue_light) },
+    SnacksNotifierBorderWarn  { bg = hsl(p.bg_dim),  fg = hsl(p.yellow) },
+    SnacksNotifierBorderError { bg = hsl(p.bg_dim),  fg = hsl(p.red) },
+    SnacksNotifierBorderDebug { bg = hsl(p.bg_dim),  fg = hsl(p.grey_light) },
+    SnacksNotifierBorderTrace { bg = hsl(p.bg_dim),  fg = hsl(p.grey_light) },
+    SnacksNotifierIconInfo    { fg = hsl(p.blue_light) },
+    SnacksNotifierIconWarn    { fg = hsl(p.yellow) },
+    SnacksNotifierIconError   { fg = hsl(p.red) },
+    SnacksNotifierIconDebug   { fg = hsl(p.grey_light) },
+    SnacksNotifierIconTrace   { fg = hsl(p.grey_light) },
+    SnacksNotifierTitleInfo   { fg = hsl(p.blue_light) },
+    SnacksNotifierTitleWarn   { fg = hsl(p.yellow) },
+    SnacksNotifierTitleError  { fg = hsl(p.red) },
+    SnacksNotifierTitleDebug  { fg = hsl(p.grey_light) },
+    SnacksNotifierTitleTrace  { fg = hsl(p.grey_light) },
+
+    -- Snacks dashboard
+    SnacksDashboardHeader    { fg = hsl(p.teal) },
+    SnacksDashboardTitle     { fg = hsl(p.yellow) },
+    SnacksDashboardDesc      { fg = hsl(p.fg) },
+    SnacksDashboardIcon      { fg = hsl(p.teal_muted) },
+    SnacksDashboardKey       { fg = hsl(p.yellow) },
+    SnacksDashboardFooter    { fg = hsl(p.grey_light) },
+    SnacksDashboardSpecial   { fg = hsl(p.teal_muted) },
+
+    -- Snacks words (reference highlights)
+    SnacksWordsCurrentRead   { bg = hsl(p.bg_3) },
+    SnacksWordsCurrentWrite  { bg = hsl(p.bg_3), gui = "bold" },
+    SnacksWordsOtherRead     { bg = hsl(p.bg_2) },
+    SnacksWordsOtherWrite    { bg = hsl(p.bg_2), gui = "bold" },
+  }
+end)
+
+local lualine = {
+  normal = {
+    a = { fg = p.bg,    bg = p.teal,    gui = "bold" },
+    b = { fg = p.fg,    bg = p.bg_1 },
+    c = { fg = p.fg,    bg = p.bg_dim },
+  },
+  insert = {
+    a = { fg = p.bg,    bg = p.yellow,  gui = "bold" },
+    b = { fg = p.fg,    bg = p.bg_1 },
+    c = { fg = p.fg,    bg = p.bg_dim },
+  },
+  visual = {
+    a = { fg = p.bg,    bg = p.cyan,    gui = "bold" },
+    b = { fg = p.fg,    bg = p.bg_1 },
+    c = { fg = p.fg,    bg = p.bg_dim },
+  },
+  replace = {
+    a = { fg = p.bg,    bg = p.red,     gui = "bold" },
+    b = { fg = p.fg,    bg = p.bg_1 },
+    c = { fg = p.fg,    bg = p.bg_dim },
+  },
+  command = {
+    a = { fg = p.bg,    bg = p.orange,  gui = "bold" },
+    b = { fg = p.fg,    bg = p.bg_1 },
+    c = { fg = p.fg,    bg = p.bg_dim },
+  },
+  inactive = {
+    a = { fg = p.grey_light, bg = p.bg_dim },
+    b = { fg = p.grey_light, bg = p.bg_dim },
+    c = { fg = p.grey_light, bg = p.bg_dim },
+  },
+}
+
+return { theme = theme, lualine = lualine }
