@@ -16,7 +16,7 @@ vim.cmd.colorscheme("nighthawk")
 
 ## Setup
 
-All integrations are enabled by default. Disable any you don't need:
+All integrations are opt-in. Enable the ones you use:
 
 ```lua
 require("nighthawk").setup({

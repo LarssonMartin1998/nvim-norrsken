@@ -2,11 +2,11 @@ local M = {}
 
 local defaults = {
   integrations = {
-    blink                   = true,
-    noice                   = true,
-    incline                 = true,
-    neogit                  = true,
-    tiny_inline_diagnostics = true,
+    blink                   = false,
+    noice                   = false,
+    incline                 = false,
+    neogit                  = false,
+    tiny_inline_diagnostics = false,
   },
 }
 
