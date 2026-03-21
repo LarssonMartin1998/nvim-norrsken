@@ -1,4 +1,4 @@
-# norrsken.nvim
+# nvim-norrsken
 
 A dark Neovim colorscheme built with [lush.nvim](https://github.com/rktjmp/lush.nvim).
 
@@ -9,7 +9,7 @@ The color palette is built around a deep navy-black background with a deliberate
 Requires [lush.nvim](https://github.com/rktjmp/lush.nvim) (declared automatically as a lazy.nvim dependency).
 
 ```lua
-{ "LarssonMartin1998/norrsken.nvim" }
+{ "LarssonMartin1998/nvim-norrsken" }
 ```
 
 ```lua

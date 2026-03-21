@@ -1,4 +1,4 @@
 return {
-  "LarssonMartin1998/norrsken.nvim",
-  dependencies = { "rktjmp/lush.nvim" },
+    "LarssonMartin1998/nvim-norrsken",
+    dependencies = { "rktjmp/lush.nvim" },
 }
