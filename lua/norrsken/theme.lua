@@ -75,6 +75,7 @@ local theme = lush(function(injected_functions)
     sym("@variable.builtin")                           { fg = hsl(p.yellow) },
     sym("@variable.parameter")                         { fg = hsl(p.fg), gui = "italic" },
     sym("@field")                                      { fg = hsl(p.fg), gui = "bold" },
+    sym("@variable.member")                            { fg = hsl(p.fg), gui = "bold" },
     sym("@property")                                   { fg = hsl(p.fg), gui = "bold" },
     sym("@include")                                    { fg = hsl(p.teal_muted) },
     sym("@comment")                                    { fg = hsl(p.grey_light), gui = "italic" },
