@@ -64,6 +64,7 @@ local theme = lush(function(injected_functions)
     sym("@constant.macro")                             { fg = hsl(p.teal_muted) },
     sym("@function")                                   { fg = hsl(p.teal) },
     sym("@function.builtin")                           { fg = hsl(p.yellow) },
+    sym("@function.builtin.bash")                      { fg = hsl(p.teal) },
     sym("@function.call")                              { fg = hsl(p.teal) },
     sym("@function.macro")                             { fg = hsl(p.teal_muted) },
     sym("@type")                                       { fg = hsl(p.blue) },
