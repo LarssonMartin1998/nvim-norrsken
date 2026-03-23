@@ -95,6 +95,7 @@ local theme = lush(function(injected_functions)
     sym("@lsp.typemod.class.constructorOrDestructor.cpp") { fg = hsl(p.teal) },
     sym("@lsp.typemod.class.deduced.cpp")              { fg = hsl(p.yellow) },
     sym("@lsp.typemod.type.deduced.cpp")               { fg = hsl(p.yellow) },
+    sym("@lsp.typemod.typeParameter.functionScope.cpp") { fg = hsl(p.yellow) },
 
     -- Inlay hints
     LspInlayHint { fg = hsl(p.grey_dark), bg = hsl(p.bg_1), gui = "italic" },
