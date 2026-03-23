@@ -1,5 +1,7 @@
 # nvim-norrsken
 
+![Demo](images/demo.png)
+
 A dark Neovim colorscheme built with [lush.nvim](https://github.com/rktjmp/lush.nvim).
 
 The color palette is built around a deep navy-black background with a deliberate semantic system. Each color maps to a meaningful category. Keywords are warm amber, execution flow is teal, types are blue, values are tan. The goal is low visual noise with high information density.
