@@ -6,6 +6,7 @@ local defaults = {
     noice                   = false,
     incline                 = false,
     neogit                  = false,
+    mini                    = false,
     tiny_inline_diagnostics = false,
   },
 }

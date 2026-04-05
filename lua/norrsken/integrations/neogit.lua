@@ -1,7 +1,8 @@
+local lush = require("lush")
+local hsl = lush.hsl
 local p = require("norrsken.palette")
-local hsl = require("lush").hsl
 
-return function()
+local spec = function()
   return {
     -- Status window
     NeogitNormal            { bg = hsl(p.bg),       fg = hsl(p.fg) },
@@ -36,10 +37,14 @@ return function()
     NeogitHunkHeaderHighlight   { bg = hsl(p.bg_3),        fg = hsl(p.fg),     gui = "bold" },
     NeogitDiffContext           { bg = hsl(p.bg) },
     NeogitDiffContextHighlight  { bg = hsl(p.bg_1) },
-    NeogitDiffAdd               { bg = hsl(p.diff_add),    fg = hsl(p.teal) },
-    NeogitDiffAddHighlight      { bg = hsl(p.diff_add),    fg = hsl(p.teal),       gui = "bold" },
-    NeogitDiffDelete            { bg = hsl(p.diff_delete), fg = hsl(p.grey_bright) },
-    NeogitDiffDeleteHighlight   { bg = hsl(p.diff_delete), fg = hsl(p.grey_bright), gui = "bold" },
+    NeogitDiffAdd               { bg = hsl(p.diff_add),    fg = hsl(p.green) },
+    NeogitDiffAddHighlight      { bg = hsl(p.diff_add),    fg = hsl(p.green),  gui = "bold" },
+    NeogitDiffDelete            { bg = hsl(p.diff_delete), fg = hsl(p.red) },
+    NeogitDiffDeleteHighlight   { bg = hsl(p.diff_delete), fg = hsl(p.red),    gui = "bold" },
+    NeogitDiffAddInline         { fg = hsl(p.green), gui = "bold" },
+    NeogitDiffDeleteInline      { fg = hsl(p.red),   gui = "bold" },
+    NeogitDiffAddCursor         { bg = hsl(p.green), fg = hsl(p.bg) },
+    NeogitDiffDeleteCursor      { bg = hsl(p.red),   fg = hsl(p.bg) },
 
     -- Commit message
     NeogitCommitMessage         { fg = hsl(p.fg) },
@@ -60,4 +65,8 @@ return function()
     NeogitGraphBoldWhite        { fg = hsl(p.fg),      gui = "bold" },
     NeogitGraphGray             { fg = hsl(p.grey_fg) },
   }
+end
+
+return function()
+    lush(spec)
 end

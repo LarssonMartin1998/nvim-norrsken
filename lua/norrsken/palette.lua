@@ -18,7 +18,8 @@ M.grey_fg     = "#B4B4B9"
 M.grey_bright = "#CACACE"
 
 -- Amber — keywords, declarations, language structure
-M.yellow = "#D4973E"
+M.yellow        = "#D4973E"
+M.yellow_bright = "#FFD44A"
 
 -- Orange — search highlights
 M.orange = "#FF761A"
@@ -27,6 +28,9 @@ M.peach  = "#FFB07B"
 -- Teal — execution flow (functions, return, control flow)
 M.teal       = "#34BFA4"
 M.teal_muted = "#9BCCBF"
+
+-- Green — git diff added
+M.green = "#52c97a"
 
 -- Cyan — UI only (lualine)
 M.cyan = "#39c5cf"
@@ -49,6 +53,8 @@ M.red = "#ff5555"
 M.diff_add    = "#0d2a1e"
 M.diff_delete = "#16162e"
 M.diff_change = "#1c1308"
-M.diff_text   = "#2e1e08"
+M.diff_add_hl    = "#245e3a"
+M.diff_delete_hl = "#5c1428"
+M.diff_text      = "#2e1e08"
 
 return M

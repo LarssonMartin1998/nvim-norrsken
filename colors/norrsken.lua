@@ -8,7 +8,8 @@ lush(require("norrsken.theme"))
 if integrations.blink                   then lush(require("norrsken.integrations.blink"))                   end
 if integrations.noice                   then lush(require("norrsken.integrations.noice"))                   end
 if integrations.incline                 then lush(require("norrsken.integrations.incline"))                 end
-if integrations.neogit                  then lush(require("norrsken.integrations.neogit"))                  end
+if integrations.mini                    then require("norrsken.integrations.mini")()                    end
+if integrations.neogit                  then require("norrsken.integrations.neogit")()                  end
 if integrations.tiny_inline_diagnostics then lush(require("norrsken.integrations.tiny-inline-diagnostics")) end
 
 local p = require("norrsken.palette")

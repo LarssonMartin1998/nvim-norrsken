@@ -112,9 +112,9 @@ local theme = lush(function(injected_functions)
     DiagnosticUnderlineHint  { gui = "undercurl", sp = p.teal_muted },
 
     -- Git diff
-    DiffAdd      { fg = hsl(p.teal),    bg = hsl(p.diff_add) },
+    DiffAdd      { fg = hsl(p.green),  bg = hsl(p.diff_add) },
     DiffChange   { fg = hsl(p.yellow), bg = hsl(p.diff_change) },
-    DiffDelete   { fg = hsl(p.grey_bright), bg = hsl(p.diff_delete) },
+    DiffDelete   { fg = hsl(p.red),    bg = hsl(p.diff_delete) },
     DiffText     { fg = hsl(p.yellow), bg = hsl(p.diff_text), gui = "bold" },
 
     -- Gitsigns
