@@ -70,7 +70,7 @@ local theme = lush(function(injected_functions)
     sym("@function.macro")                             { fg = hsl(p.teal_muted) },
     sym("@type")                                       { fg = hsl(p.blue) },
     sym("@type.builtin")                               { fg = hsl(p.blue) },
-    sym("@type.builtin.cpp")                           { fg = hsl(p.yellow) },
+    sym("@type.builtin.cpp")                           { fg = hsl(p.blue) },
     sym("@type.definition")                            { fg = hsl(p.blue) },
     sym("@type.qualifier")                             { fg = hsl(p.yellow) },
     sym("@variable")                                   { fg = hsl(p.fg) },
@@ -100,7 +100,7 @@ local theme = lush(function(injected_functions)
     sym("@lsp.typemod.class.constructorOrDestructor.cpp") { fg = hsl(p.teal) },
     sym("@lsp.typemod.class.deduced.cpp")              { fg = hsl(p.yellow) },
     sym("@lsp.typemod.type.deduced.cpp")               { fg = hsl(p.yellow) },
-    sym("@lsp.typemod.typeParameter.functionScope.cpp") { fg = hsl(p.yellow) },
+    sym("@lsp.typemod.typeParameter.functionScope.cpp") { fg = hsl(p.blue) },
 
     -- Inlay hints
     LspInlayHint { fg = hsl(p.grey_dark), bg = hsl(p.bg_1), gui = "italic" },

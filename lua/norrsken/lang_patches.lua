@@ -10,6 +10,15 @@ local lsp_clears = {
   },
 }
 
+-- Per-filetype callbacks registered via a single FileType autocmd.
+-- Use this for workarounds that must run per-buffer (e.g. matchadd, which is window-local).
+local filetype_hooks = {
+  cpp = function()
+    -- Predicates in ; extends queries are not evaluated in Neovim, so matchadd
+    -- at priority 200 is used to recolor 'auto' past treesitter (100) and LSP (125-127).
+    vim.fn.matchadd("@keyword", [[\<auto\>]], 200)
+  end,
+}
 
 function M.apply()
   for lang, groups in pairs(lsp_clears) do
@@ -18,6 +27,16 @@ function M.apply()
     end
   end
 
+  local patterns = vim.tbl_keys(filetype_hooks)
+  if #patterns > 0 then
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = patterns,
+      callback = function(ev)
+        local hook = filetype_hooks[ev.match]
+        if hook then hook() end
+      end,
+    })
+  end
 end
 
 return M
