@@ -3,3 +3,4 @@ compile_commands.json
 test/main
 .claude/
 CLAUDE.md
+Session.vim
