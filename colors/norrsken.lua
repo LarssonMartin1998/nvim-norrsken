@@ -4,6 +4,7 @@ local lush = require("lush")
 local integrations = require("norrsken").get_config().integrations
 
 lush(require("norrsken.theme"))
+require("norrsken.lang_patches").apply()
 
 if integrations.blink                   then lush(require("norrsken.integrations.blink"))                   end
 if integrations.noice                   then lush(require("norrsken.integrations.noice"))                   end
